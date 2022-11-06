@@ -16,7 +16,7 @@ app.get('/index', (req,response) =>{
     let params = {
         action: "opensearch",
         search: req.query.person,
-        limit: "1",
+        limit: "p",
         namespace: "0",
         format: "json"
     }
@@ -37,7 +37,7 @@ app.get('/index', (req,response) =>{
             //get wikip json
             wikip(x , (err, final) => {
                 if (err){
-                    response.redirect('404');
+                    response.redirect('505');
                 }
                 else{
                     const answers = final;
