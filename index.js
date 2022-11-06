@@ -16,7 +16,7 @@ app.get('/index', (req,response) =>{
     let params = {
         action: "opensearch",
         search: req.query.person,
-        limit: "1",
+        limit: "p",
         namespace: "0",
         format: "json"
     }
